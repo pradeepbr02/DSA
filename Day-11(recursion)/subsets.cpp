@@ -4,8 +4,10 @@ class Solution {
             ans.push_back(output);
             return;
 }
-        solution(nums , output , index+1 , ans);
+        
         output.push_back(nums[index]);
+        solution(nums , output , index+1 , ans);
+       output.pop_back();
         solution(nums , output , index+1 , ans);
         
         
