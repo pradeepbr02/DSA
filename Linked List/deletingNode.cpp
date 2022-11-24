@@ -13,3 +13,23 @@ public:
         
     }
 };
+
+//soln2
+
+class Solution {
+    typedef struct node{
+        int val;
+        struct node *next;
+    }ListNode;
+public:
+
+    void deleteNode(ListNode* node) {
+            ListNode *temp=node->next;
+            node->val=temp->val;
+            node->next=temp->next;
+            delete temp;
+
+        
+    }
+};
+
